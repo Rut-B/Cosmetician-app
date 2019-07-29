@@ -6,14 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-    private final int SPLASH_TIME_OUT = 500;
+    private final int SPLASH_TIME_OUT = 2500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent resultIntent = new Intent(this, Main2Activity.class);
+//        Intent resultIntent = new Intent(this, Main2Activity.class);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

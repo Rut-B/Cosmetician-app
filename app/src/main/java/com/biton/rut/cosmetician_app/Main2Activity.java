@@ -1,8 +1,10 @@
 package com.biton.rut.cosmetician_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -78,16 +80,24 @@ public class Main2Activity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
         int id = item.getItemId();
 
         if (id == R.id.nav_customer) {
+            fragmentManager.beginTransaction().replace(R.id.mainContentID, new CustomersFragment()).commit();
             // Handle the camera action
         } else if (id == R.id.nav_construct) {
+            fragmentManager.beginTransaction().replace(R.id.mainContentID, new ContractsFragment()).commit();
 
-        }  else if (id == R.id.nav_manage) {
+        }  else if (id == R.id.nav_tool) {
+            fragmentManager.beginTransaction().replace(R.id.mainContentID, new ToolFragment()).commit();
 
         }
+        else if (id == R.id.nav_gallery) {
+            fragmentManager.beginTransaction().replace(R.id.mainContentID, new GalleryFragment()).commit();
 
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

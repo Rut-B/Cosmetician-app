@@ -4,8 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/main_back"
+
     android:layout_margin="0dp"
     tools:context=".MainActivity">
 
+    <ImageButton android:src="@drawable/main_back"
+        android:id="@+id/thebuttonid"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:background="@null"
+        />
 </LinearLayout>
