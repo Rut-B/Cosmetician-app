@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@android:color/holo_blue_bright"
-        android:text="TextView"
+        android:text="customer"
         android:textSize="42dp"
         android:textStyle="bold"
         tools:text="customer" />
