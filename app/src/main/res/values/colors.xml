@@ -2,7 +2,9 @@
 <resources>
     <color name="colorPrimary">#050013</color>
     <color name="colorPrimaryDark">#050013</color>
-    <color name="colorAccent">#967c5a</color>
+    <color name="colorAccent">#91967c5a</color>
     <color name="colorBackLogo">#050013</color>
     <color name="colorFontLogo">#967c5a</color>
+    <color name="colorFont2Logo">#175c5c5c</color>
 </resources>
+
