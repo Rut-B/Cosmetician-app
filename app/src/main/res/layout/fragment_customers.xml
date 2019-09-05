@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#105c5c5c"
     android:descendantFocusability="beforeDescendants"
     android:paddingLeft="15dp"
     android:paddingRight="15dp">
@@ -15,6 +14,7 @@
         android:layout_height="80dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
+        android:background="@color/colorFont2Logo"
         android:clickable="true"
         android:clipChildren="true"
         android:descendantFocusability="afterDescendants"
@@ -72,50 +72,84 @@
             android:background="@android:color/transparent"
             android:drawableRight="@drawable/ic_treatment" />
 
-        <!--<TextView-->
-        <!--android:id="@+id/txtStore"-->
-        <!--style="?android:textAppearanceMedium"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="5dp"-->
-        <!--android:layout_marginLeft="8dp"-->
-        <!--android:layout_marginTop="7dp"-->
-        <!--android:layout_toRightOf="@+id/imgItemIcon"-->
-        <!--android:text="store"-->
-        <!--android:textColor="#FEEAE3"-->
-        <!--android:textSize="30dp"-->
-        <!--android:textStyle="bold"-->
-        <!--tools:text="Title 1" />-->
+    </RelativeLayout>
 
-        <!--<TextView-->
-        <!--android:id="@+id/txtCategory"-->
-        <!--style="?android:textAppearanceSmall"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@+id/txtStore"-->
-        <!--android:layout_marginLeft="8dp"-->
-        <!--android:layout_marginTop="-5dp"-->
-        <!--android:layout_toRightOf="@+id/imgItemIcon"-->
-        <!--android:text="category"-->
-        <!--android:textColor="#FEEAE3"-->
-        <!--android:textSize="18sp"-->
-        <!--android:textStyle="bold" />-->
+    <RelativeLayout
+        android:id="@+id/r2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="83dp"
+        android:autofillHints="@color/colorFont2Logo"
+        android:background="@color/colorFont2Logo"
+        android:clickable="true"
+        android:clipChildren="true"
+        android:descendantFocusability="afterDescendants"
+        android:orientation="vertical"
+        tools:context=".CreditItemActivity">
 
-        <!--<android.support.design.widget.CoordinatorLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent">-->
 
-        <!--<ImageView-->
-        <!--android:id="@+id/imgItemIcovn"-->
-        <!--android:layout_width="55dp"-->
-        <!--android:layout_height="45dp"-->
-        <!--android:layout_gravity="center|end"-->
-        <!--android:layout_marginLeft="20dp"-->
+        <ImageView
+            android:id="@+id/imgItemIcon1"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|end"
+            android:layout_marginLeft="0dp"
+            android:padding="0dp"
+            app:srcCompat="@drawable/person2" />
 
-        <!--android:layout_toRightOf="@+id/txtStore"-->
-        <!--android:padding="0dp"-->
-        <!--app:srcCompat="@drawable/main_logo" />-->
-        <!--</android.support.design.widget.CoordinatorLayout>-->
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/imgItemIcon1"
+            android:autoText="false"
+            android:text=" Jessice Carey"
+            android:textSize="19dp" />
+
+        <Button
+            android:id="@+id/button21"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:drawableRight="@drawable/ic_action_name" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="13dp"
+            android:text="15.7.19"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/buttonTreatmeent1"
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/imgItemIcon1"
+            android:background="@android:color/transparent"
+            android:drawableRight="@drawable/ic_treatment" />
+
+        <Button
+            android:id="@+id/buttonContract1"
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="135dp"
+            android:background="@android:color/transparent"
+            android:drawableRight="@drawable/ic_contract" />
+
     </RelativeLayout>
 
 </RelativeLayout>
