@@ -24,10 +24,10 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="15dp"
                 android:gravity="center_horizontal"
                 android:text="New Customer"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/profileImageView"
@@ -102,7 +102,7 @@
 
                 <EditText
                     android:id="@+id/addressStreetInput"
-                    android:layout_width="80dp"
+                    android:layout_width="35dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:hint="street"
@@ -111,7 +111,7 @@
 
                 <EditText
                     android:id="@+id/addressBuildingInput"
-                    android:layout_width="40dp"
+                    android:layout_width="25dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:hint="building"
@@ -120,7 +120,7 @@
 
                 <EditText
                     android:id="@+id/addressApartmentInput"
-                    android:layout_width="40dp"
+                    android:layout_width="45dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:hint="apartment"
@@ -191,30 +191,35 @@
         </LinearLayout>
 
     </ScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="90dp"
         android:layout_alignParentBottom="true"
         android:gravity="right"
         android:orientation="horizontal">
 
         <FrameLayout
-            android:layout_width="55dp"
+            android:id="@+id/linearbut"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
-            android:background="@drawable/corner_different"
-            android:orientation="vertical"
-            android:id="@+id/linearbut">
+            android:layout_marginBottom="10dp"
+
+            android:orientation="vertical">
 
             <ImageButton
-
+                android:background="@drawable/ic_add_save_customer"
+                android:layout_marginRight="10dp"
                 android:id="@+id/saveNewBtn"
-                android:layout_width="23dp"
-                android:layout_height="22dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="22dp"
-                android:background="#51c779"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:paddingBottom="20dp"
+                android:paddingRight="50dp"
+                android:paddingTop="20dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/correct" />
+                 />
         </FrameLayout>
 
     </LinearLayout>
