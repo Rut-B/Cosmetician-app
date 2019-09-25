@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.biton.rut.cosmetician_app.newCustomerActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:paddingLeft="-5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:text="New Customer"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="150dp"
+                app:srcCompat="@drawable/user" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/roundcorners"
+                android:elevation="1dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/name" />
+
+                <EditText
+                    android:id="@+id/fNameInput"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:hint="first name"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp" />
+
+                <EditText
+                    android:id="@+id/lNameInput"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:hint="last name"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/roundcorners"
+                android:elevation="1dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/address" />
+
+                <EditText
+                    android:id="@+id/addressCityInput"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:hint="city"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp" />
+
+                <EditText
+                    android:id="@+id/addressStreetInput"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:hint="street"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp" />
+
+                <EditText
+                    android:id="@+id/addressBuildingInput"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:hint="building"
+                    android:inputType="number"
+                    android:paddingLeft="10dp" />
+
+                <EditText
+                    android:id="@+id/addressApartmentInput"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:hint="apartment"
+                    android:inputType="number"
+                    android:paddingLeft="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/roundcorners"
+                android:elevation="1dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/email" />
+
+                <EditText
+                    android:id="@+id/emailInput"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:hint="email"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/roundcorners"
+                android:elevation="1dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/phone" />
+
+                <EditText
+                    android:id="@+id/phoneNumberInput"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:hint="phone number"
+                    android:inputType="number"
+                    android:paddingLeft="10dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/corner_different"
+            android:orientation="vertical"
+            android:id="@+id/linearbut">
+
+            <ImageButton
+
+                android:id="@+id/saveNewBtn"
+                android:layout_width="23dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="22dp"
+                android:background="#51c779"
+                android:scaleType="fitXY"
+                android:src="@drawable/correct" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -9,14 +9,15 @@ public class Customer {
     private String firstName;
     private String lastName;
     private Address Address;
-    private int phoneNumber;
-    private String email;
+    private int phoneNumber; // why not string??????????????
+    private String email;//primary key?????????????????/
     private List<Image> imagesList;
     private List<Treatment> treatmentList;
     private List<Contract> contractList;
-    private Image customerImage;
+    private byte[] customerImage;
+    private boolean favorite; // true
 
-    public Customer(String firstName, String lastName, Address address, int phoneNumber, String email, List<Image> imagesList, List<Treatment> treatmentList, List<Contract> contractList, Image customerImage) {
+    public Customer(String firstName, String lastName, Address address, int phoneNumber, String email, List<Image> imagesList, List<Treatment> treatmentList, List<Contract> contractList, byte[] customerImage) {
         this.firstName = firstName;
         this.lastName = lastName;
         Address = address;
@@ -28,6 +29,17 @@ public class Customer {
         this.customerImage = customerImage;
     }
 
+    public Customer(String firstName, String lastName, String address, String phoneNumber, String email, byte[] customerImage) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        Address = null;// ???????????????????????????????????
+        this.phoneNumber = 12345;//????????????
+        this.email = email;
+        this.imagesList = imagesList;
+        this.treatmentList = treatmentList;
+        this.contractList = contractList;
+        this.customerImage = customerImage;
+    }
     public String getFirstName() {
         return firstName;
     }
@@ -92,11 +104,29 @@ public class Customer {
         this.contractList = contractList;
     }
 
-    public Image getCustomerImage() {
+    public byte[] getCustomerImage() {
         return customerImage;
     }
 
-    public void setCustomerImage(Image customerImage) {
+    public void setCustomerImage(byte[] customerImage) {
         this.customerImage = customerImage;
+    }
+
+    public String getName(){
+      return this.firstName +" " + this.lastName;
+    }
+
+    public String getTreatDate() {
+        return "12/12/12";
+    }
+    public boolean getIsFavorite() {
+        return this.favorite;
+    }
+    public  boolean haveTreatments() {
+        return true;
+    }
+
+    public boolean haveContract() {
+        return  true;
     }
 }

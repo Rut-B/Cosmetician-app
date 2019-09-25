@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,14 +19,19 @@ import android.view.MenuItem;
 public class Main2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public static SQLiteHelper sqLiteHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        //sql  DB
+        sqLiteHelper = new SQLiteHelper(this, "CustomersDB.sqlite", null, 1);
+        sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS CUSTOMERS(Id INTEGER PRIMARY KEY AUTOINCREMENT, firstName VARCHAR,lastName VARCHAR,email VARCHAR, phoneNumber VARCHAR, addressC VARCHAR,addressS VARCHAR,addressB VARCHAR,addressA VARCHAR,isFavorite VARCHAR,haveContract VARCHAR,haveTreats VARCHAR,profileImage BLOB)");
+         //sqLiteHelper.queryData("DROP TABLE IF EXISTS CUSTOMERS");
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -42,6 +48,7 @@ public class Main2Activity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
