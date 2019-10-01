@@ -3,8 +3,19 @@
     <color name="colorPrimary">#050013</color>
     <color name="colorPrimaryDark">#050013</color>
     <color name="colorAccent">#91967c5a</color>
+    <color name="colorAccentLight">#68967c5a</color>
+
     <color name="colorBackLogo">#050013</color>
     <color name="colorFontLogo">#967c5a</color>
     <color name="colorFont2Logo">#175c5c5c</color>
+
+
+        <color name="colorGray">#495C67</color>
+        <color name="colorOrange">#F68159</color>
+        <color name="colorLightGray">#a6abae</color>
+
+        <color name="colorBackroundWhite">#f0f2ea</color>
+
+
 </resources>
 

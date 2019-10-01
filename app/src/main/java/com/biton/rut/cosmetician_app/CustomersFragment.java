@@ -89,21 +89,43 @@ public class CustomersFragment extends Fragment implements AdapterView.OnItemCli
     {
         list = new ArrayList<>();
         // get all data from sqlite
-        while (cursor.moveToNext()) {
-            int id = cursor.getInt(0);
-            String fname = cursor.getString(1);
-            String lname = cursor.getString(2);
-            String email = cursor.getString(3);
-            String phoneNumber = cursor.getString(4);
-            String addressC = cursor.getString(5);
-            String addressS = cursor.getString(6);
-            String addressB = cursor.getString(7);
-            String addressA = cursor.getString(8);
-            // have finish???????????????????????????????????????????????????
-            byte[] image = cursor.getBlob(12);
-            list.add(new Customer(fname, lname, addressC, email, phoneNumber,image));
-        }
+        for(int i=0; i<10; i++){
+            Log.e("info", ""+i);
+            Log.e("info", "" + cursor.moveToPosition(i));
+            if(cursor.moveToPosition(i)) {
+                String fname = cursor.getString(1);
+                String lname = cursor.getString(2);
+                String email = cursor.getString(3);
+                String phoneNumber = cursor.getString(4);
+                String addressC = cursor.getString(5);
+                String addressS = cursor.getString(6);
+                String addressB = cursor.getString(7);
+                String addressA = cursor.getString(8);
+                // have finish???????????????????????????????????????????????????
+                byte[] image = cursor.getBlob(12);
+                list.add(new Customer(fname, lname, addressC, email, phoneNumber, image));
+            }
 
+        }
+       /* if(cursor!=null &&cursor.moveToFirst()) {
+            do {
+                Log.e("info", "" + cursor.moveToNext());
+
+                int id = cursor.getInt(0);
+                String fname = cursor.getString(1);
+                String lname = cursor.getString(2);
+                String email = cursor.getString(3);
+                String phoneNumber = cursor.getString(4);
+                String addressC = cursor.getString(5);
+                String addressS = cursor.getString(6);
+                String addressB = cursor.getString(7);
+                String addressA = cursor.getString(8);
+                // have finish???????????????????????????????????????????????????
+                byte[] image = cursor.getBlob(12);
+                list.add(new Customer(fname, lname, addressC, email, phoneNumber, image));
+            }while (cursor.moveToNext());
+            cursor.close();
+        }*/
         //   Collections.reverse(list);
         if(list.isEmpty()){
             //show snake

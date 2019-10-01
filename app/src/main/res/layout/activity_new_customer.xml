@@ -29,12 +29,39 @@
                 android:text="New Customer"
                 android:textSize="20sp" />
 
-            <ImageView
-                android:id="@+id/profileImageView"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="150dp"
-                app:srcCompat="@drawable/user" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/profileImageView"
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="150dp"
+                    app:srcCompat="@drawable/user" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <Button
+                        android:id="@+id/btnLooadFromMemory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Load From Memory" />
+
+                    <Button
+                        android:id="@+id/btnFromCamera"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Image From Camera" />
+                </LinearLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

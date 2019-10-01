@@ -9,15 +9,15 @@ public class Customer {
     private String firstName;
     private String lastName;
     private Address Address;
-    private int phoneNumber; // why not string??????????????
-    private String email;//primary key?????????????????/
+    private String phoneNumber; // why not string?????????????? can be as string
+    private String email;//primary key?????????????????/ no - the phone number is a primary key
     private List<Image> imagesList;
     private List<Treatment> treatmentList;
     private List<Contract> contractList;
     private byte[] customerImage;
     private boolean favorite; // true
 
-    public Customer(String firstName, String lastName, Address address, int phoneNumber, String email, List<Image> imagesList, List<Treatment> treatmentList, List<Contract> contractList, byte[] customerImage) {
+    public Customer(String firstName, String lastName, Address address, String phoneNumber, String email, List<Image> imagesList, List<Treatment> treatmentList, List<Contract> contractList, byte[] customerImage) {
         this.firstName = firstName;
         this.lastName = lastName;
         Address = address;
@@ -33,7 +33,7 @@ public class Customer {
         this.firstName = firstName;
         this.lastName = lastName;
         Address = null;// ???????????????????????????????????
-        this.phoneNumber = 12345;//????????????
+        this.phoneNumber = "0583298226";//????????????
         this.email = email;
         this.imagesList = imagesList;
         this.treatmentList = treatmentList;
@@ -64,11 +64,11 @@ public class Customer {
         Address = address;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

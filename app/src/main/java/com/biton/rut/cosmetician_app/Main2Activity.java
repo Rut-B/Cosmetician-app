@@ -98,7 +98,7 @@ public class Main2Activity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.mainContentID, new ContractsFragment()).commit();
 
         }  else if (id == R.id.nav_tool) {
-            fragmentManager.beginTransaction().replace(R.id.mainContentID, new ToolFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.mainContentID, new CustomerDetailsFragment()).commit();
 
         }
         else if (id == R.id.nav_gallery) {

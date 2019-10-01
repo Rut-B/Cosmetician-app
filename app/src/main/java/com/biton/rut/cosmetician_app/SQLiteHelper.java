@@ -30,7 +30,7 @@ public class SQLiteHelper extends SQLiteOpenHelper
                            String isFavorite, String haveContract, String haveTreats, byte[] image)
     {
         SQLiteDatabase database = getWritableDatabase();
-        String sql = "INSERT INTO CUSTOMERS VALUES (NULL, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO CUSTOMERS VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ? ,?, ?, ?, ?)";
 
         SQLiteStatement statement = database.compileStatement(sql);
         statement.clearBindings();
