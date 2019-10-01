@@ -28,8 +28,9 @@ public class Main2Activity extends AppCompatActivity
         setSupportActionBar(toolbar);
         //sql  DB
         sqLiteHelper = new SQLiteHelper(this, "CustomersDB.sqlite", null, 1);
+//        sqLiteHelper.queryData("DROP TABLE IF EXISTS CUSTOMERS");
         sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS CUSTOMERS(Id INTEGER PRIMARY KEY AUTOINCREMENT, firstName VARCHAR,lastName VARCHAR,email VARCHAR, phoneNumber VARCHAR, addressC VARCHAR,addressS VARCHAR,addressB VARCHAR,addressA VARCHAR,isFavorite VARCHAR,haveContract VARCHAR,haveTreats VARCHAR,profileImage BLOB)");
-         //sqLiteHelper.queryData("DROP TABLE IF EXISTS CUSTOMERS");
+
 
         //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {

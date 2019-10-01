@@ -89,7 +89,7 @@ public class CustomersFragment extends Fragment implements AdapterView.OnItemCli
     {
         list = new ArrayList<>();
         // get all data from sqlite
-        for(int i=0; i<0; i++){
+        for(int i=0; i<10; i++){
             Log.e("info", ""+i);
             Log.e("info", "" + cursor.moveToPosition(i));
             if(cursor.moveToPosition(i)) {
