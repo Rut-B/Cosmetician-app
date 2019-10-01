@@ -64,20 +64,26 @@ requestPermissions( new String[] { Manifest.permission.CAMERA, Manifest.permissi
 
     public void init() {
         profileImage = findViewById(R.id.profileImageView);
-        loadFromMemory = findViewById(R.id.btnLooadFromMemory);
-        loadFromMemory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loadImgFromMemoryFunc(view);
-            }
-        });
-        imgFromCamera = findViewById(R.id.btnFromCamera);
-        imgFromCamera.setOnClickListener(new View.OnClickListener() {
+        profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 loadImgFromCameraFunc(view);
             }
         });
+//        loadFromMemory = findViewById(R.id.btnLooadFromMemory);
+//        loadFromMemory.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                loadImgFromMemoryFunc(view);
+//            }
+//        });
+//        imgFromCamera = findViewById(R.id.btnFromCamera);
+//        imgFromCamera.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                loadImgFromCameraFunc(view);
+//            }
+//        });
         btn_save = findViewById(R.id.saveNewBtn);
         btn_save.setOnClickListener(new View.OnClickListener() {
 

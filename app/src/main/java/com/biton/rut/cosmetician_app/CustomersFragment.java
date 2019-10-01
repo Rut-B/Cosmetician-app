@@ -89,7 +89,7 @@ public class CustomersFragment extends Fragment implements AdapterView.OnItemCli
     {
         list = new ArrayList<>();
         // get all data from sqlite
-        for(int i=0; i<10; i++){
+        for(int i=0; i<0; i++){
             Log.e("info", ""+i);
             Log.e("info", "" + cursor.moveToPosition(i));
             if(cursor.moveToPosition(i)) {
@@ -133,7 +133,7 @@ public class CustomersFragment extends Fragment implements AdapterView.OnItemCli
                     .setAction("OK", null).show();
 
         }
-        adapter= new CustomerAdapter(list,getContext());
+        adapter = new CustomerAdapter(list,getContext());
         listView.setAdapter(adapter);
     }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

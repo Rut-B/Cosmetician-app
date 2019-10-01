@@ -40,27 +40,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:minHeight="150dp"
-                    app:srcCompat="@drawable/user" />
+                    app:srcCompat="@drawable/ic_new_person" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <Button
-                        android:id="@+id/btnLooadFromMemory"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Load From Memory" />
-
-                    <Button
-                        android:id="@+id/btnFromCamera"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Image From Camera" />
-                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -235,18 +216,17 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:background="@drawable/ic_add_save_customer"
-                android:layout_marginRight="10dp"
                 android:id="@+id/saveNewBtn"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="0dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="0dp"
+                android:background="@drawable/ic_add_save_customer"
                 android:paddingBottom="20dp"
                 android:paddingRight="50dp"
                 android:paddingTop="20dp"
-                android:scaleType="fitXY"
-                 />
+                android:scaleType="fitXY" />
         </FrameLayout>
 
     </LinearLayout>
