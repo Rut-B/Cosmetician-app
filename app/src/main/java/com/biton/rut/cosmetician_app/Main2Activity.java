@@ -30,16 +30,7 @@ public class Main2Activity extends AppCompatActivity
         sqLiteHelper = new SQLiteHelper(this, "CustomersDB.sqlite", null, 1);
 //        sqLiteHelper.queryData("DROP TABLE IF EXISTS CUSTOMERS");
         sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS CUSTOMERS(Id INTEGER PRIMARY KEY AUTOINCREMENT, firstName VARCHAR,lastName VARCHAR,email VARCHAR, phoneNumber VARCHAR, addressC VARCHAR,addressS VARCHAR,addressB VARCHAR,addressA VARCHAR,isFavorite VARCHAR,haveContract VARCHAR,haveTreats VARCHAR,profileImage BLOB)");
-
-
-        //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS TREATMENTS(Id INTEGER PRIMARY KEY AUTOINCREMENT, customerID INTEGER, dateDay VARCHAR, dateTime VARCHAR, treatment_type VARCHAR,machine_type VARCHAR,colorTreatment VARCHAR, treatmentImage BLOB , treatmentCost FLOAT)");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -60,6 +51,7 @@ public class Main2Activity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -72,23 +64,12 @@ public class Main2Activity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.main2, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -112,6 +93,10 @@ public class Main2Activity extends AppCompatActivity
         }
         else if (id == R.id.nav_gallery) {
             fragmentManager.beginTransaction().replace(R.id.mainContentID, new GalleryFragment()).commit();
+
+        }
+        else if (id == R.id.nav_treatment) {
+            fragmentManager.beginTransaction().replace(R.id.mainContentID, new TreatmentFragment()).commit();
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

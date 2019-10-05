@@ -1,5 +1,6 @@
 package com.biton.rut.cosmetician_app;
 import android.media.Image;
+import android.widget.ImageView;
 
 import java.util.Date;
 import java.util.List;
@@ -8,13 +9,14 @@ public class Treatment {
 
     private Date date;
     private Customer customerTreatment;
-    private TREATMENT_TYPE treatment_type;
-    private MACHINE_TYPE machine_type;
+    private String treatment_type;
+    private String machine_type;
     private ColorTreatment colorTreatment;
     private List<Image> treatmentImages;
     private float treatmentCost;
+    private  byte[] treatmentImage;
 
-    public Treatment(Date date, Customer customerTreatment, TREATMENT_TYPE treatment_type, MACHINE_TYPE machine_type, ColorTreatment colorTreatment, List<Image> treatmentImages, float treatmentCost) {
+    public Treatment(Date date, Customer customerTreatment, String treatment_type, String machine_type, ColorTreatment colorTreatment, List<Image> treatmentImages, float treatmentCost, byte[] treatmentImage) {
         this.date = date;
         this.customerTreatment = customerTreatment;
         this.treatment_type = treatment_type;
@@ -22,6 +24,14 @@ public class Treatment {
         this.colorTreatment = colorTreatment;
         this.treatmentImages = treatmentImages;
         this.treatmentCost = treatmentCost;
+        this.treatmentImage = treatmentImage;
+    }
+    public byte[] getTreatmentImage() {
+        return treatmentImage;
+    }
+
+    public void setTreatmentImage(byte[] treatmentImage) {
+        this.treatmentImage = treatmentImage;
     }
 
     public Date getDate() {
@@ -40,19 +50,19 @@ public class Treatment {
         this.customerTreatment = customerTreatment;
     }
 
-    public TREATMENT_TYPE getTreatment_type() {
+    public String getTreatment_type() {
         return treatment_type;
     }
 
-    public void setTreatment_type(TREATMENT_TYPE treatment_type) {
+    public void setTreatment_type(String treatment_type) {
         this.treatment_type = treatment_type;
     }
 
-    public MACHINE_TYPE getMachine_type() {
+    public String getMachine_type() {
         return machine_type;
     }
 
-    public void setMachine_type(MACHINE_TYPE machine_type) {
+    public void setMachine_type(String machine_type) {
         this.machine_type = machine_type;
     }
 

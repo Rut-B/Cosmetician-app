@@ -56,7 +56,7 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public com.biton.rut.cosmetician_app.Address getAddress() {
+    public Address getAddress() {
         return Address;
     }
 

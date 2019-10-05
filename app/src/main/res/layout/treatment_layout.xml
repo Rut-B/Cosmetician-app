@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#ffffff"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorFont2Logo"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:descendantFocusability="afterDescendants"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imageCustomerID"
+                android:layout_width="33dp"
+                android:layout_height="26dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/customerNameTreatID"
+                android:layout_gravity="center|end"
+                android:layout_marginStart="130dp"
+                android:padding="0dp"
+                app:srcCompat="@drawable/person_example_img"
+                android:contentDescription="TODO" />
+
+            <ImageView
+                android:id="@+id/treatmentViewID"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center|end"
+                android:padding="0dp"
+                app:srcCompat="@drawable/eyebrows_icon"
+                card_view:srcCompat="@drawable/eyebrows_icon"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:id="@+id/customerNameTreatID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="102dp"
+                android:layout_marginTop="14dp"
+                android:text="Cecilia Nik"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/treatTimeViewID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/imageCustomerID"
+                android:layout_marginEnd="25dp"
+                android:text="13:45"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/treatDateViewID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/imageCustomerID"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="18dp"
+                android:text="1.8.19"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

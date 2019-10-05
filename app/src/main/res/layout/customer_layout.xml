@@ -29,7 +29,7 @@
 
 
         <ImageView
-            android:id="@+id/profileImageViewInList"
+            android:id="@+id/imageCustomerID"
             android:layout_width="95dp"
             android:layout_height="match_parent"
             android:layout_gravity="center|end"
@@ -38,13 +38,13 @@
             app:srcCompat="@drawable/person_example_img" />
 
         <TextView
-            android:id="@+id/customerNameView"
+            android:id="@+id/customerNameTreatID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/profileImageViewInList"
+            android:layout_toRightOf="@+id/imageCustomerID"
             android:autoText="false"
             android:text="Cecilia Nik"
             android:textSize="19dp" />
@@ -74,7 +74,7 @@
             android:layout_width="33dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/profileImageViewInList"
+            android:layout_toEndOf="@+id/imageCustomerID"
             android:background="@android:color/transparent"
             android:drawableRight="@drawable/ic_treatment" />
 

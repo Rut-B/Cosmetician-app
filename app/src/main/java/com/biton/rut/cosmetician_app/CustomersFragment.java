@@ -66,7 +66,7 @@ public class CustomersFragment extends Fragment implements AdapterView.OnItemCli
 
         cursor = getOption();
         getListItems(cursor);
-         btn_plus = view.findViewById(R.id.plusBtn);
+        btn_plus = view.findViewById(R.id.plusBtn);
         btn_plus.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -136,27 +136,17 @@ public class CustomersFragment extends Fragment implements AdapterView.OnItemCli
         adapter = new CustomerAdapter(list,getContext());
         listView.setAdapter(adapter);
     }
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
     private Cursor getOption()
     {
         return Main2Activity.sqLiteHelper.getData("SELECT * FROM CUSTOMERS");
     }
-
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id)
     {
         Customer item = (Customer) adapterView.getItemAtPosition(position);
-
-
-
     }
-
-
-
-
-
-
 }
