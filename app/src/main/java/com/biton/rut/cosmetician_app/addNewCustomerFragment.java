@@ -15,6 +15,9 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -46,13 +49,30 @@ public class addNewCustomerFragment extends Fragment {
     Button loadFromMemory;
     Button imgFromCamera;
     ImageView profileImage;
+    EditText fName;
+    EditText lName;
+    EditText addressCity;
+    EditText addressStreet;
+    EditText addressBuilding;
+    EditText addressApartment;
+    EditText email;
+    EditText phoneNumber;
     //SQLiteHelper sqLiteHelper;
     private String cameraFilePath;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_new_customer, container, false);
+        View view =  inflater.inflate(R.layout.fragment_add_new_customer, container, false);
+         fName = view.findViewById(R.id.fNameInput);
+         lName = view.findViewById(R.id.lNameInput);
+         addressCity = view.findViewById(R.id.addressCityInput);
+         addressStreet = view.findViewById(R.id.addressStreetInput);
+         addressBuilding = view.findViewById(R.id.addressBuildingInput);
+         addressApartment = view.findViewById(R.id.addressApartmentInput);
+         email = view.findViewById(R.id.emailInput);
+         phoneNumber = view.findViewById(R.id.phoneNumberInput);
+        return view;
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -80,7 +100,7 @@ public class addNewCustomerFragment extends Fragment {
             public void onClick(View view) {
 
                 //get all data from edit texts
-                EditText fName = view.findViewById(R.id.fNameInput);
+               /* EditText fName = view.findViewById(R.id.fNameInput);
                 Log.e("!!!!!!!!!!!!!!!!!!", fName.toString());
 
                 EditText lName = view.findViewById(R.id.lNameInput);
@@ -88,9 +108,9 @@ public class addNewCustomerFragment extends Fragment {
                 EditText addressStreet = view.findViewById(R.id.addressStreetInput);
                 EditText addressBuilding = view.findViewById(R.id.addressBuildingInput);
                 EditText addressApartment = view.findViewById(R.id.addressApartmentInput);
-
                 EditText email = view.findViewById(R.id.emailInput);
-                EditText phoneNumber = view.findViewById(R.id.phoneNumberInput);
+                EditText phoneNumber = view.findViewById(R.id.phoneNumberInput);*/
+
                 String fNameStr = fName.getText().toString().trim().toLowerCase();
                 String lNameStr = lName.getText().toString().trim().toLowerCase();
                 String addressCityStr = addressCity.getText().toString().trim().toLowerCase();
@@ -118,7 +138,7 @@ public class addNewCustomerFragment extends Fragment {
                                 fNameStr, lNameStr, emailStr, phoneNumberStr,
                                 addressCityStr, addressStreetStr, addressBuildingStr, addressApartmentStr,
                                 "false", "false", "false",
-                                ImageHandler.imageViewToByte((ImageView)view.findViewById(R.id.profileImageView))
+                                ImageHandler.imageViewToByte(profileImage)//(ImageView)view.findViewById(R.id.profileImageView))
                         );
                         Toast.makeText(getContext(), "added successfully!",
                                 Toast.LENGTH_LONG).show();
@@ -130,7 +150,10 @@ public class addNewCustomerFragment extends Fragment {
                 }
 
 
-
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.mainContentID, new CustomersFragment()).commit();
+                DrawerLayout drawer = (DrawerLayout) getActivity().findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
 //                Intent contact = new Intent(getContext(), Main2Activity.class);
 //                startActivity(contact);
 
