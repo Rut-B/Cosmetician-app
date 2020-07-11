@@ -25,7 +25,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/removerBtnID"
                 android:layout_width="81dp"
                 android:layout_height="73dp"
                 android:layout_marginTop="20dp"
@@ -33,7 +33,7 @@
                 android:src="@drawable/remover_icon" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/eyelinerBtnID"
                 android:layout_width="81dp"
                 android:layout_height="73dp"
                 android:layout_marginTop="20dp"
@@ -41,7 +41,7 @@
                 android:src="@drawable/iliner_icon" />
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/eyebrowsBtnID"
                 android:layout_width="81dp"
                 android:layout_height="73dp"
                 android:layout_marginTop="20dp"
@@ -49,7 +49,7 @@
                 android:src="@drawable/eyebrows_icon_circle" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/lipsBtnID"
                 android:layout_width="81dp"
                 android:layout_height="73dp"
                 android:layout_marginTop="20dp"
@@ -73,7 +73,7 @@
                 android:src="@drawable/machine_icon" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/machineSpinnerID"
                 android:layout_width="match_parent"
                 android:layout_height="69dp"
                 android:layout_weight="1"
